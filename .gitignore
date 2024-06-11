@@ -1,5 +1,5 @@
 # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
+lib/
 # dependencies
 node_modules/
 
@@ -15,6 +15,7 @@ web-build/
 *.p12
 *.key
 *.mobileprovision
+
 
 # Metro
 .metro-health-check*
