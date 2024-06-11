@@ -1,17 +1,41 @@
 import React, { useState } from "react";
-import { Image, ScrollView, Text, View } from "react-native";
+import { Alert, Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { images } from "../../constants";
 import FormField from "../../components/formfield";
 import CustomButton from "../../components/customButton";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
+import { getCurrentUser, signIn } from "../../lib/appwrite";
+import { useGlobalContext } from "../../context/globalProvider";
 
 const SignIn = () => {
+  const { setUser, setIsLogged } = useGlobalContext();
+
   const [form, setForm] = useState({ email: "", password: "" });
   const [isSubmitting, setisSubmitting] = useState(false);
 
-  const submit = () => {};
+  const submit = async () => {
+    if (form.email === "" || form.password === "") {
+      Alert.alert("Error", "Please fill in all fields");
+    }
+
+    setisSubmitting(true);
+
+    try {
+      await signIn(form.email, form.password);
+      const result = await getCurrentUser();
+      setUser(result);
+      setIsLogged(true);
+
+      Alert.alert("Success", "User signed in successfully");
+      router.replace("/home");
+    } catch (error) {
+      Alert.alert("Error", error.message);
+    } finally {
+      setisSubmitting(false);
+    }
+  };
   return (
     <SafeAreaView className="bg-primary h-full">
       <ScrollView>
@@ -27,18 +51,14 @@ const SignIn = () => {
           <FormField
             title="Email"
             value={form.email}
-            handleChangeText={(e) =>
-              setForm({ ...form, email: e.target.value })
-            }
+            handleChangeText={(e) => setForm({ ...form, email: e })}
             otherStyles="mt-7"
             keyboardType="email-address"
           />
           <FormField
             title="Password"
             value={form.password}
-            handleChangeText={(e) =>
-              setForm({ ...form, password: e.target.value })
-            }
+            handleChangeText={(e) => setForm({ ...form, password: e })}
             otherStyles="mt-7"
           />
 
