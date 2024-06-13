@@ -43,7 +43,7 @@ const SignUp = () => {
             className="w-[115px] h-[35px]"
           />
           <Text className="text-2xl text-black text-psemibold mt-10 font-psemibold ">
-            Sign up to Aora
+            Sign up to Fusionary
           </Text>
           <FormField
             title="Username"

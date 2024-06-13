@@ -45,7 +45,7 @@ const SignIn = () => {
             className="w-[115px] h-[35px]"
           />
           <Text className="text-2xl text-black text-psemibold mt-10 font-psemibold ">
-            Log in to Aora
+            Log in to Fusionary
           </Text>
           <FormField
             title="Email"
