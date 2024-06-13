@@ -42,7 +42,7 @@ const SignUp = () => {
             resizeMode="contain"
             className="w-[115px] h-[35px]"
           />
-          <Text className="text-2xl text-white text-psemibold mt-10 font-psemibold ">
+          <Text className="text-2xl text-black text-psemibold mt-10 font-psemibold ">
             Sign up to Aora
           </Text>
           <FormField

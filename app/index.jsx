@@ -15,7 +15,6 @@ import { useGlobalContext } from "../context/globalProvider";
 
 export default function App() {
   const { loading, isLogged } = useGlobalContext();
-  console.log(loading, isLogged);
 
   if (!loading && isLogged) return <Redirect href="/home" />;
   return (
@@ -33,19 +32,18 @@ export default function App() {
             className=" max-w-[380px] w-full h-[300px]"
           />
           <View className="relative mt-5">
-            <Text className="text-3xl text-white font-pbold text-center">
+            <Text className="text-3xl text-secondary font-pbold text-center">
               Discover Endless Possibilities with{" "}
-              <Text className="text-secondary-200">Aora</Text>
             </Text>
             <Image
-              source={images.path}
-              className="w-[136px] h-[15px] absolute -bottom-2 -right-8 "
+              source={images.logo}
+              className="w-[300px] "
               resizeMode="contain"
             />
           </View>
           <Text className="text-sm text-gray-100 font-pregular mt-7 text-center">
             Where creativity meets innovation: Embark on a jouney of limitless
-            exploration with Aora
+            exploration with Fusionary
           </Text>
 
           <CustomButton

@@ -42,10 +42,10 @@ const Profile = () => {
                 className="w-6 h-6"
               />
             </TouchableOpacity>
-            <View className="border border-secondary w-16 h-16 rounded-lg justify-center items-center">
+            <View className="border border-secondary w-16 h-16 rounded-full justify-center items-center">
               <Image
                 source={{ uri: user?.avatar }}
-                className="w-[90%] h-[90%] rounded-lg"
+                className="w-[90%] h-[90%] rounded-full"
                 resizeMode="contain"
               />
             </View>

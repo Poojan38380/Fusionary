@@ -4,7 +4,7 @@ import React from "react";
 const InfoBox = ({ title, subtitle, containerStyles, titleStyles }) => {
   return (
     <View className={containerStyles}>
-      <Text className={`text-white text-center font-psemibold ${titleStyles}`}>
+      <Text className={`text-black text-center font-psemibold ${titleStyles}`}>
         {title}
       </Text>
       <Text

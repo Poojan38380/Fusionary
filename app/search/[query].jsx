@@ -28,7 +28,9 @@ const Search = () => {
             <Text className="font-pmedium text-sm text-gray-100">
               Results with...
             </Text>
-            <Text className="text-2xl font-psemibold text-white">{query}</Text>
+            <Text className="text-2xl font-psemibold text-secondary">
+              {query}
+            </Text>
             <View className="mt-6 mb-8">
               <SearchInput initialQuery={query} />
             </View>

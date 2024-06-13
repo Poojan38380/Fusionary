@@ -84,7 +84,7 @@ const Create = () => {
   return (
     <SafeAreaView className="bg-primary h-full">
       <ScrollView className="px-4 my-6">
-        <Text className="text-2xl text-white font-psemibold">Upload Video</Text>
+        <Text className="text-2xl text-black font-psemibold">Upload Video</Text>
         <FormField
           title="Video title"
           value={form.title}
@@ -106,8 +106,8 @@ const Create = () => {
                 resizeMode={ResizeMode.COVER}
               />
             ) : (
-              <View className="w-full h-40 px-4 bg-black-100 rounded-2xl justify-center items-center ">
-                <View className="w-14 h-14 justify-center items-center border-secondary border border-dashed">
+              <View className="w-full h-40 px-4 bg-light rounded-2xl justify-center items-center ">
+                <View className="w-14 h-14 justify-center items-center border-white border border-dashed">
                   <Image
                     source={icons.upload}
                     resizeMode="contain"
@@ -132,13 +132,13 @@ const Create = () => {
                 className="w-full h-64 rounded-2xl"
               />
             ) : (
-              <View className="w-full h-16 px-4 bg-black-100 rounded-2xl justify-center items-center border-2 border-black-200 flex-row space-x-2  ">
+              <View className="w-full h-16 px-4 bg-light rounded-2xl justify-center items-center border-2 border-light flex-row space-x-2  ">
                 <Image
                   source={icons.upload}
                   resizeMode="contain"
                   className="w-5 h-5"
                 />
-                <Text className="text-sm text-gray-100 font-pmedium">
+                <Text className="text-sm text-white font-pmedium">
                   Choose a File
                 </Text>
               </View>
