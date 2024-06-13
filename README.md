@@ -4,6 +4,8 @@
 
 Welcome to Fusionary, a unique social platform where creativity meets community. Users can upload AI-generated videos, engage with content, and be part of a vibrant network of visionaries.
 
+#Preview the app Now !!! [ Click Here and Scan](shorturl.at/58VEi)
+
 ## Table of Contents
 
 - [About](#about) 📖
